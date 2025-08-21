@@ -1,0 +1,158 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Tamaño base para íconos de Lucide */
+.lucide {
+    width: 18px;
+    height: 18px;
+}
+
+/* Efecto para tarjetas de categoría y producto */
+.category-card, .product-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover, .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Dark mode specific styles for elements not covered by Tailwind's dark: prefix */
+/* These are mostly for consistency if you add custom elements or override default Tailwind behavior */
+.dark .bg-gray-100 {
+    background-color: #1a202c; /* Darker background for body/main content */
+}
+
+.dark .bg-white {
+    background-color: #2d3748; /* Darker background for cards/modals */
+}
+
+.dark .text-gray-800 {
+    color: #e2e8f0; /* Lighter text for dark mode */
+}
+
+.dark .text-gray-700 {
+    color: #cbd5e0;
+}
+
+.dark .text-gray-600 {
+    color: #a0aec0;
+}
+
+.dark .text-gray-500 {
+    color: #718096;
+}
+
+.dark .border-gray-300 {
+    border-color: #4a5568;
+}
+
+.dark .divide-gray-200 {
+    border-color: #4a5568;
+}
+
+.dark .bg-gray-50 {
+    background-color: #2d3748; /* For table headers */
+}
+
+.dark .shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific overrides for elements that might not fully transition with dark: */
+.dark input, .dark select, .dark textarea {
+    background-color: #4a5568;
+    border-color: #6b7280;
+    color: #e2e8f0;
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+    color: #a0aec0;
+}
+
+/* Custom alert colors for dark mode if needed */
+.dark .bg-green-500 { background-color: #38a169; }
+.dark .bg-red-500 { background-color: #e53e3e; }
+.dark .bg-blue-500 { background-color: #4299e1; }
+
+/* Marca de agua del logo en el dashboard */
+.dashboard-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+    width: 400px;
+    height: 400px;
+    background-image: url('logo/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Asegurar que el contenido esté por encima de la marca de agua */
+#main-content {
+    position: relative;
+    z-index: 10;
+}
+
+.bg-white {
+    position: relative;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.dark .bg-gray-800 {
+    position: relative;
+    z-index: 5;
+    background-color: rgba(45, 55, 72, 0.95);
+}
+
+/* Para el sidebar también */
+#sidebar {
+    position: relative;
+    z-index: 40;
+}
+
+/* Para el header también */
+header {
+    position: relative;
+    z-index: 30;
+}
+
