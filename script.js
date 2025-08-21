@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 space-y-6">
                 <div class="text-center">
                     <div class="flex justify-center mb-0">
-                        <img src="logo/VentasSyspro.png" alt="Logo de la empresa" class="w-57 h-57 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <img src="VentasSyspro.png" alt="Logo de la empresa" class="w-57 h-57 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <i data-lucide="shopping-cart" class="w-12 h-12 text-blue-600" style="display: none;"></i>
                     </div>
                     <h1 class="text-3xl font-bold text-gray-800">Bienvenido a VentasSys</h1>
